@@ -1,39 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:lookup_traffic_app/routers/routers.dart';
+import 'package:lookup_traffic_app/screens/LoginScreen/components/login_header.dart';
+import 'package:lookup_traffic_app/screens/LoginScreen/components/login_input_wrapper.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _LoginScreenState createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-  @override
   Widget build(BuildContext context) {
-    void handleLogin() {
-      Navigator.of(context).pushNamedAndRemoveUntil(
-          Routes.home, (Route<dynamic> route) => false);
-    }
-
     return Scaffold(
-      body: Center(
+      body: Container(
+        width: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              colors: [Colors.blue, Colors.lightBlueAccent, Colors.cyanAccent]),
+        ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            const Text('Login Screen'),
-            ButtonBar(
-              children: <Widget>[
-                ElevatedButton(
-                  onPressed: () {
-                    handleLogin();
-                  },
-                  child: const Text('Login'),
-                ),
-              ],
+            const SizedBox(
+              height: 80,
             ),
+            const LoginHeader(),
+            Expanded(
+                child: Container(
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(60),
+                    topRight: Radius.circular(60),
+                  )),
+              child: const LoginInputWrapper(),
+            ))
           ],
         ),
       ),

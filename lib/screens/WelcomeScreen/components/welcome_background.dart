@@ -1,43 +1,43 @@
 import 'package:flutter/material.dart';
 
-class WelcomeBackground extends StatefulWidget {
+class WelcomeBackground extends StatelessWidget {
   final Widget child;
   const WelcomeBackground({
     super.key,
     required this.child,
+    this.topImage = "assets/images/main_top.png",
+    this.bottomImage = "assets/images/login_bottom.png",
   });
 
-  @override
-  // ignore: library_private_types_in_public_api
-  _WelcomeBackgroundState createState() => _WelcomeBackgroundState();
-}
+  final String topImage, bottomImage;
 
-class _WelcomeBackgroundState extends State<WelcomeBackground> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SizedBox(
-          width: double.infinity,
-          child: Stack(
-            children: <Widget>[
-              Positioned(
-                top: 0,
-                left: 0,
-                child: Image.asset(
-                  'assets/images/main_top.png',
-                  width: MediaQuery.of(context).size.width * 0.3,
-                ),
+        width: double.infinity,
+        height: MediaQuery.of(context).size.height,
+        child: Stack(
+          alignment: Alignment.center,
+          children: <Widget>[
+            Positioned(
+              top: 0,
+              left: 0,
+              child: Image.asset(
+                topImage,
+                width: 120,
               ),
-              Positioned(
-                bottom: 0,
-                left: 0,
-                child: Image.asset(
-                  'assets/images/main_bottom.png',
-                  width: MediaQuery.of(context).size.width * 0.2,
-                ),
-              ),
-            ],
-          )),
+            ),
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: Image.asset(bottomImage, width: 120),
+            ),
+            SafeArea(child: child),
+          ],
+        ),
+      ),
     );
   }
 }
