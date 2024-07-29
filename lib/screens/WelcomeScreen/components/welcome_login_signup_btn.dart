@@ -13,8 +13,8 @@ class WelcomeLoginAndSignupBtn extends StatelessWidget {
       children: [
         ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pushNamedAndRemoveUntil(
-                Routes.login, (Route<dynamic> route) => false);
+            Navigator.of(context).pushNamed(Routes.login,
+                arguments: (Route<dynamic> route) => false);
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: kPrimaryLightColor,
@@ -27,8 +27,8 @@ class WelcomeLoginAndSignupBtn extends StatelessWidget {
         const SizedBox(height: 16),
         ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pushNamedAndRemoveUntil(
-                Routes.login, (Route<dynamic> route) => false);
+            Navigator.of(context).pushNamed(Routes.register,
+                arguments: (Route<dynamic> route) => false);
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: kPrimaryLightColor,
