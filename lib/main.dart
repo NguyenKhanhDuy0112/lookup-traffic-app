@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lookup_traffic_app/constants/theme.dart';
 import 'package:lookup_traffic_app/routers/routers.dart';
+import 'package:lookup_traffic_app/screens/HomeScreen/home_screen.dart';
 import 'package:lookup_traffic_app/screens/WelcomeScreen/welcome_screen.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       routes: Routes.routes,
-      home: const WelcomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
