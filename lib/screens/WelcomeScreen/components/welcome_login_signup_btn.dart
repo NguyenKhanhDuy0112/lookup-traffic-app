@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lookup_traffic_app/constants/theme.dart';
-import 'package:lookup_traffic_app/routers/routers.dart';
 
 class WelcomeLoginAndSignupBtn extends StatelessWidget {
   const WelcomeLoginAndSignupBtn({
@@ -13,8 +12,8 @@ class WelcomeLoginAndSignupBtn extends StatelessWidget {
       children: [
         ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pushNamed(Routes.login,
-                arguments: (Route<dynamic> route) => false);
+            // Navigator.of(context).pushNamed(Routes.login,
+            //     arguments: (Route<dynamic> route) => false);
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: kPrimaryLightColor,
@@ -27,8 +26,8 @@ class WelcomeLoginAndSignupBtn extends StatelessWidget {
         const SizedBox(height: 16),
         ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pushNamed(Routes.register,
-                arguments: (Route<dynamic> route) => false);
+            // Navigator.of(context).pushNamed(Routes.register,
+            //     arguments: (Route<dynamic> route) => false);
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: kPrimaryLightColor,

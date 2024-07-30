@@ -1,36 +1,60 @@
 import 'package:flutter/material.dart';
-import 'package:lookup_traffic_app/screens/LoginScreen/components/login_header.dart';
-import 'package:lookup_traffic_app/screens/LoginScreen/components/login_input_wrapper.dart';
+import 'package:lookup_traffic_app/constants/theme.dart';
+import 'components/login_form.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
   @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              colors: [Colors.blue, Colors.lightBlueAccent, Colors.cyanAccent]),
-        ),
+      body: SingleChildScrollView(
         child: Column(
-          children: <Widget>[
-            const SizedBox(
-              height: 80,
+          children: [
+            Image.asset(
+              "assets/images/login_dark.png",
+              fit: BoxFit.cover,
             ),
-            const LoginHeader(),
-            Expanded(
-                child: Container(
-              decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(60),
-                    topRight: Radius.circular(60),
-                  )),
-              child: const LoginInputWrapper(),
-            ))
+            Padding(
+              padding: const EdgeInsets.all(defaultPadding),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Welcome back!",
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+                  const SizedBox(height: defaultPadding / 2),
+                  const Text(
+                    "Log in with your data that you intered during your registration.",
+                  ),
+                  const SizedBox(height: defaultPadding),
+                  LogInForm(formKey: _formKey),
+                  SizedBox(
+                    height:
+                        size.height > 700 ? size.height * 0.1 : defaultPadding,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      if (_formKey.currentState!.validate()) {
+                        // Navigator.of(context).pushNamed(Routes.home,
+                        //     arguments: (Route<dynamic> route) => false);
+                      }
+                    },
+                    child: const Text("Log in"),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),

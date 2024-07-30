@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lookup_traffic_app/constants/theme.dart';
-import 'package:lookup_traffic_app/routers/routers.dart';
-import 'package:lookup_traffic_app/screens/HomeScreen/home_screen.dart';
-import 'package:lookup_traffic_app/screens/WelcomeScreen/welcome_screen.dart';
+import 'package:lookup_traffic_app/constants/app_theme.dart';
+import 'package:lookup_traffic_app/routers/route_constants.dart';
+import 'package:lookup_traffic_app/routers/router.dart' as router;
 
 void main() {
   runApp(const MyApp());
@@ -14,14 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Lookup Traffic',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: kPrimaryColor,
-        scaffoldBackgroundColor: Colors.white,
-      ),
-      routes: Routes.routes,
-      home: const HomeScreen(),
+      theme: AppTheme.lightTheme(context),
+      themeMode: ThemeMode.light,
+      onGenerateRoute: router.generateRoute,
+      initialRoute: homeScreenRoute,
     );
   }
 }
