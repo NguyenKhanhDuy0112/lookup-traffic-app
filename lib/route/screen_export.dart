@@ -26,3 +26,7 @@ export '/screens/wallet/views/empty_wallet_screen.dart';
 export '/screens/wallet/views/wallet_screen.dart';
 export '/screens/profile/views/profile_screen.dart';
 export '/screens/user_info/views/user_info_screen.dart';
+export '/screens/driver_license/views/driver_license_screen.dart';
+export '/screens/traffic_violation/views/traffic_violation_screen.dart';
+export '/screens/vehicle/views/vehicle_screen.dart';
+export '/entry_point.dart';

@@ -6,8 +6,8 @@ import 'package:shop/route/route_constants.dart';
 
 import '../../../constants.dart';
 
-class BookmarkScreen extends StatelessWidget {
-  const BookmarkScreen({super.key});
+class TrafficViolationScreen extends StatelessWidget {
+  const TrafficViolationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +20,8 @@ class BookmarkScreen extends StatelessWidget {
           model: 'Camry',
           color: 'Blue',
           yearOfManufacture: 2020,
+          imageUrl:
+              'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&auto=format&fit=crop&q=60', // Add a real image URL
         ),
         violationDate: '2024-07-01',
         violationType: 'Speeding',
@@ -37,6 +39,8 @@ class BookmarkScreen extends StatelessWidget {
           model: 'CR-V',
           color: 'Black',
           yearOfManufacture: 2019,
+          imageUrl:
+              'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&auto=format&fit=crop&q=60',
         ),
         violationDate: '2024-07-15',
         violationType: 'Parking',
@@ -54,6 +58,8 @@ class BookmarkScreen extends StatelessWidget {
           model: 'Fiesta',
           color: 'Red',
           yearOfManufacture: 2021,
+          imageUrl:
+              'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&auto=format&fit=crop&q=60',
         ),
         violationDate: '2024-07-20',
         violationType: 'Running Red Light',
@@ -71,6 +77,8 @@ class BookmarkScreen extends StatelessWidget {
           model: 'M3',
           color: 'White',
           yearOfManufacture: 2022,
+          imageUrl:
+              'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&auto=format&fit=crop&q=60',
         ),
         violationDate: '2024-07-25',
         violationType: 'Expired Registration',
@@ -80,13 +88,12 @@ class BookmarkScreen extends StatelessWidget {
         status: 'Paid',
         createdAt: '2024-07-25',
       ),
-      // Add more dummy data as needed
     ];
 
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Bookmarks',
+          'Traffic Violations',
           style: TextStyle(fontSize: 20),
         ),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
