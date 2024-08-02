@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shop/screens/traffic_violation/views/traffic_violation_screen.dart';
-
 import 'screen_export.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -16,10 +14,6 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case homeScreenRoute:
       return MaterialPageRoute(
         builder: (context) => const HomeScreen(),
-      );
-    case bookmarkScreenRoute:
-      return MaterialPageRoute(
-        builder: (context) => const BookmarkScreen(),
       );
     case entryPointScreenRoute:
       return MaterialPageRoute(

@@ -9,7 +9,8 @@ import '../../../constants.dart';
 class BannerMStyle4 extends StatelessWidget {
   const BannerMStyle4({
     super.key,
-    this.image = "https://i.imgur.com/R4iKkDD.png",
+    this.image =
+        "https://media.istockphoto.com/id/1345196315/photo/downtown-jakarta-busy-city-scene-at-sunset-with-heavy-traffic.webp?b=1&s=170667a&w=0&k=20&c=V9emnk33T0aJX17VbwlQzmTvPVmZZy30fYFdJuQB3DQ=",
     required this.title,
     required this.press,
     required this.discountParcent,
@@ -53,26 +54,26 @@ class BannerMStyle4 extends StatelessWidget {
                         ),
                       ),
                     const SizedBox(height: defaultPadding / 2),
-                    Text(
-                      title.toUpperCase(),
-                      style: const TextStyle(
-                        fontFamily: grandisExtendedFont,
-                        fontSize: 28,
-                        fontWeight: FontWeight.w900,
-                        color: Colors.white,
-                        height: 1,
-                      ),
-                    ),
+                    // Text(
+                    //   title.toUpperCase(),
+                    //   style: const TextStyle(
+                    //     fontFamily: grandisExtendedFont,
+                    //     fontSize: 28,
+                    //     fontWeight: FontWeight.w900,
+                    //     color: Colors.white,
+                    //     height: 1,
+                    //   ),
+                    // ),
                     // const SizedBox(height: defaultPadding / 4),
-                    Text(
-                      "UP TO $discountParcent% OFF",
-                      style: const TextStyle(
-                        fontFamily: grandisExtendedFont,
-                        color: Colors.white,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
+                    // Text(
+                    //   "UP TO $discountParcent% OFF",
+                    //   style: const TextStyle(
+                    //     fontFamily: grandisExtendedFont,
+                    //     color: Colors.white,
+                    //     fontSize: 12,
+                    //     fontWeight: FontWeight.bold,
+                    //   ),
+                    // )
                   ],
                 ),
               ),

@@ -6,7 +6,8 @@ import '../../../constants.dart';
 class BannerMStyle1 extends StatelessWidget {
   const BannerMStyle1({
     super.key,
-    this.image = "https://i.imgur.com/UP7xhPG.png",
+    this.image =
+        "https://media.istockphoto.com/id/1167082956/photo/traffic-jam-near-queensboro-bridge-new-york-city.webp?b=1&s=170667a&w=0&k=20&c=2bVT2Zhr0OTZnz3dgpr1lJEybd-rGxJXc3VMXOMAvEg=",
     required this.text,
     required this.press,
   });
@@ -39,13 +40,13 @@ class BannerMStyle1 extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              const Text(
-                "Shop now",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
+              // const Text(
+              //   "Shop now",
+              //   style: TextStyle(
+              //     color: Colors.white,
+              //     fontWeight: FontWeight.w600,
+              //   ),
+              // ),
               const SizedBox(
                 width: 64,
                 child: Divider(

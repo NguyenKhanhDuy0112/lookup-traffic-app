@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../banner_discount_tag.dart';
 import 'banner_m.dart';
 
 import '../../../constants.dart';
@@ -8,7 +7,8 @@ import '../../../constants.dart';
 class BannerMStyle2 extends StatelessWidget {
   const BannerMStyle2({
     super.key,
-    this.image = "https://i.imgur.com/J1Qjut7.png",
+    this.image =
+        "https://images.unsplash.com/photo-1526113418551-2241c19dd635?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYWZmaWN8ZW58MHx8MHx8fDA%3D",
     required this.title,
     required this.press,
     this.subtitle,
@@ -36,16 +36,16 @@ class BannerMStyle2 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      title.toUpperCase(),
-                      style: const TextStyle(
-                        fontFamily: grandisExtendedFont,
-                        fontSize: 28,
-                        fontWeight: FontWeight.w900,
-                        color: Colors.white,
-                        height: 1,
-                      ),
-                    ),
+                    // Text(
+                    //   title.toUpperCase(),
+                    //   style: const TextStyle(
+                    //     fontFamily: grandisExtendedFont,
+                    //     fontSize: 28,
+                    //     fontWeight: FontWeight.w900,
+                    //     color: Colors.white,
+                    //     height: 1,
+                    //   ),
+                    // ),
                     const SizedBox(height: defaultPadding / 4),
                     if (subtitle != null)
                       Text(
@@ -79,10 +79,10 @@ class BannerMStyle2 extends StatelessWidget {
             ],
           ),
         ),
-        Align(
-          alignment: Alignment.topCenter,
-          child: BannerDiscountTag(percentage: discountParcent),
-        ),
+        // Align(
+        //   alignment: Alignment.topCenter,
+        //   child: BannerDiscountTag(percentage: discountParcent),
+        // ),
       ],
     );
   }

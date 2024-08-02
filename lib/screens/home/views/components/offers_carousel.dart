@@ -26,25 +26,25 @@ class _OffersCarouselState extends State<OffersCarousel> {
   // Offers List
   List offers = [
     BannerMStyle1(
-      text: "New items with \nFree shipping",
+      text: "",
       press: () {},
     ),
     BannerMStyle2(
-      title: "Black \nfriday",
-      subtitle: "Collection",
-      discountParcent: 50,
+      title: "",
+      subtitle: "",
+      discountParcent: 0,
       press: () {},
     ),
     BannerMStyle3(
-      title: "Grab \nyours now",
-      discountParcent: 50,
+      title: "",
+      discountParcent: 0,
       press: () {},
     ),
     BannerMStyle4(
       // image: , user your image
-      title: "SUMMER \nSALE",
-      subtitle: "SPECIAL OFFER",
-      discountParcent: 80,
+      title: "",
+      subtitle: "",
+      discountParcent: 0,
       press: () {},
     ),
   ];

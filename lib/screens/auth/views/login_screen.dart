@@ -41,19 +41,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(height: defaultPadding),
                   LogInForm(formKey: _formKey),
-                  Align(
-                    child: TextButton(
-                      child: const Text("Forgot password"),
-                      onPressed: () {
-                        Navigator.pushNamed(
-                            context, passwordRecoveryScreenRoute);
-                      },
-                    ),
-                  ),
                   SizedBox(
-                    height: size.height > 700
-                        ? size.height * 0.1
-                        : defaultPadding,
+                    height:
+                        size.height > 700 ? size.height * 0.1 : defaultPadding,
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -65,18 +55,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       }
                     },
                     child: const Text("Log in"),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text("Don't have an account?"),
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, signUpScreenRoute);
-                        },
-                        child: const Text("Sign up"),
-                      )
-                    ],
                   ),
                 ],
               ),

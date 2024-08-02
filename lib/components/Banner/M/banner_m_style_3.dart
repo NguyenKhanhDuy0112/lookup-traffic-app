@@ -9,7 +9,8 @@ import '../../../constants.dart';
 class BannerMStyle3 extends StatelessWidget {
   const BannerMStyle3({
     super.key,
-    this.image = "https://i.imgur.com/8REExBV.png",
+    this.image =
+        "https://media.istockphoto.com/id/695675608/photo/aerial-view-of-shanghai-highway.webp?b=1&s=170667a&w=0&k=20&c=blRJVkWCG2Z_bTvD_J7qm20k1sGmU5eBY-6wSpDGvps=",
     required this.title,
     required this.press,
     required this.discountParcent,
@@ -30,36 +31,36 @@ class BannerMStyle3 extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(
+              const Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: defaultPadding / 2,
-                          vertical: defaultPadding / 8),
-                      color: Colors.white70,
-                      child: Text(
-                        "$discountParcent% off",
-                        style: const TextStyle(
-                          color: Colors.black54,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 12,
-                        ),
-                      ),
-                    ),
+                    // Container(
+                    //   padding: const EdgeInsets.symmetric(
+                    //       horizontal: defaultPadding / 2,
+                    //       vertical: defaultPadding / 8),
+                    //   color: Colors.white70,
+                    //   child: Text(
+                    //     "$discountParcent% off",
+                    //     style: const TextStyle(
+                    //       color: Colors.black54,
+                    //       fontWeight: FontWeight.bold,
+                    //       fontSize: 12,
+                    //     ),
+                    //   ),
+                    // ),
                     const SizedBox(height: defaultPadding / 2),
-                    Text(
-                      title.toUpperCase(),
-                      style: const TextStyle(
-                        fontFamily: grandisExtendedFont,
-                        fontSize: 28,
-                        fontWeight: FontWeight.w900,
-                        color: Colors.white,
-                        height: 1,
-                      ),
-                    ),
+                    // Text(
+                    //   title.toUpperCase(),
+                    //   style: const TextStyle(
+                    //     fontFamily: grandisExtendedFont,
+                    //     fontSize: 28,
+                    //     fontWeight: FontWeight.w900,
+                    //     color: Colors.white,
+                    //     height: 1,
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
