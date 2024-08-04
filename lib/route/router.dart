@@ -7,6 +7,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => const LoginScreen(),
       );
+    case otpScreenRoute:
+      return MaterialPageRoute(
+        builder: (context) => const OtpScreen(),
+      );
     case signUpScreenRoute:
       return MaterialPageRoute(
         builder: (context) => const SignUpScreen(),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/models/vehicle_model.dart';
+import 'package:shop/models/user_profile_model.dart';
 
 import '../../constants.dart';
 
@@ -36,7 +36,7 @@ class VehicleCard extends StatelessWidget {
                   borderRadius:
                       const BorderRadius.vertical(top: Radius.circular(20)),
                   child: Image.network(
-                    vehicle.imageUrl,
+                    vehicle.imageUrl ?? "",
                     fit: BoxFit.cover,
                     width: double.infinity,
                     height: double.infinity,

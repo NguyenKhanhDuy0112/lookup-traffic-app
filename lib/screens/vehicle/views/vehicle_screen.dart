@@ -1,56 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:shop/components/vehicle/vehicle_card.dart'; // Ensure this path is correct
+import 'package:provider/provider.dart';
+import 'package:shop/components/vehicle/vehicle_card.dart';
 import 'package:shop/constants.dart';
-import 'package:shop/models/vehicle_model.dart'; // Ensure this path is correct
+import 'package:shop/models/user_profile_model.dart';
+import 'package:shop/state/auth_state.dart';
 
 class VehicleScreen extends StatelessWidget {
   const VehicleScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<Vehicle> vehicles = [
-      Vehicle(
-        vehicleNumber: 'ABC123',
-        vehicleType: 'Sedan',
-        brand: 'Toyota',
-        model: 'Camry',
-        color: 'Blue',
-        yearOfManufacture: 2020,
-        imageUrl:
-            'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhcnxlbnwwfHwwfHx8MA%3D%3D', // Real image URL
-      ),
-      Vehicle(
-        vehicleNumber: 'XYZ789',
-        vehicleType: 'SUV',
-        brand: 'Honda',
-        model: 'CR-V',
-        color: 'Black',
-        yearOfManufacture: 2019,
-        imageUrl:
-            'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhcnxlbnwwfHwwfHx8MA%3D%3D', // Real image URL
-      ),
-      Vehicle(
-        vehicleNumber: 'LMN456',
-        vehicleType: 'Hatchback',
-        brand: 'Ford',
-        model: 'Focus',
-        color: 'Red',
-        yearOfManufacture: 2021,
-        imageUrl:
-            'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhcnxlbnwwfHwwfHx8MA%3D%3D', // Real image URL
-      ),
-      Vehicle(
-        vehicleNumber: 'OPQ012',
-        vehicleType: 'Coupe',
-        brand: 'BMW',
-        model: 'M4',
-        color: 'White',
-        yearOfManufacture: 2018,
-        imageUrl:
-            'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhcnxlbnwwfHwwfHx8MA%3D%3D', // Real image URL
-      ),
-      // Add more vehicle data as needed
-    ];
+    final authState = Provider.of<AuthState>(context);
+    final List<Vehicle> vehicles = authState.userProfile?.vehicles ?? [];
 
     return Scaffold(
       appBar: AppBar(

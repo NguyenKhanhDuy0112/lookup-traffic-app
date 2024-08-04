@@ -74,6 +74,13 @@ final passwordValidator = MultiValidator([
       errorText: 'passwords must have at least one special character')
 ]);
 
+final phoneValidator = MultiValidator([
+  RequiredValidator(errorText: 'Phone number is required'),
+  MinLengthValidator(10,
+      errorText: 'Phone number must be at least 10 digits long'),
+  PatternValidator(r'^\d{10,}$', errorText: 'Enter a valid phone number'),
+]);
+
 final emaildValidator = MultiValidator([
   RequiredValidator(errorText: 'Email is required'),
   EmailValidator(errorText: "Enter a valid email address"),

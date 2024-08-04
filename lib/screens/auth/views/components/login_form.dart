@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../../../../constants.dart';
+import 'package:shop/constants.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 
 class LogInForm extends StatelessWidget {
   const LogInForm({
     super.key,
     required this.formKey,
+    required this.onSaved,
   });
 
   final GlobalKey<FormState> formKey;
+  final Function(String?) onSaved;
 
   @override
   Widget build(BuildContext context) {
@@ -18,46 +20,17 @@ class LogInForm extends StatelessWidget {
       child: Column(
         children: [
           TextFormField(
-            onSaved: (emal) {
-              // Email
-            },
-            validator: emaildValidator.call,
+            onSaved: onSaved,
+            validator: phoneValidator.call,
             textInputAction: TextInputAction.next,
-            keyboardType: TextInputType.emailAddress,
+            keyboardType: TextInputType.phone,
             decoration: InputDecoration(
-              hintText: "Email address",
+              hintText: "Phone number",
               prefixIcon: Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: defaultPadding * 0.75),
                 child: SvgPicture.asset(
-                  "assets/icons/Message.svg",
-                  height: 24,
-                  width: 24,
-                  colorFilter: ColorFilter.mode(
-                      Theme.of(context)
-                          .textTheme
-                          .bodyLarge!
-                          .color!
-                          .withOpacity(0.3),
-                      BlendMode.srcIn),
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(height: defaultPadding),
-          TextFormField(
-            onSaved: (pass) {
-              // Password
-            },
-            validator: passwordValidator.call,
-            obscureText: true,
-            decoration: InputDecoration(
-              hintText: "Password",
-              prefixIcon: Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: defaultPadding * 0.75),
-                child: SvgPicture.asset(
-                  "assets/icons/Lock.svg",
+                  "assets/icons/Phone.svg",
                   height: 24,
                   width: 24,
                   colorFilter: ColorFilter.mode(
